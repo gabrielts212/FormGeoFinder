@@ -1,149 +1,92 @@
-// pages/map.tsx
+import { GoogleMap, Marker, useJsApiLoader } from "@react-google-maps/api";
+import React, { useState } from "react";
+import { LoadScript, StandaloneSearchBox } from "@react-google-maps/api";
 
-import { React, useState, useEffect } from "react";
-import {
-  GoogleMap,
-  Marker,
-  LoadScript,
-  StandaloneSearchBox,
-  DirectionsService,
-  DirectionsRenderer,
-} from "@react-google-maps/api";
-// import { REACT_APP_GOOGLE_API_KEY } from "../App";
-import styles from "./../../styles/api.module.css";
+import  styles from "./../../styles/api.module.css";
 
 const MapPage = () => {
+
+
   const [map, setMap] = useState(null);
-  const [searchBoxA, setSearchBoxA] = useState(null);
-  const [searchBoxB, setSearchBoxB] = useState(null);
-  const [pointA, setPointA] = useState(null);
-  const [pointB, setPointB] = useState(null);
-  const [origin, setOrigin] = useState(null);
-  const [destination, setDestination] = useState(null);
-  const [response, setResponse] = useState(null);
+  const [searchBox, setSearchBox] = useState(null);
+  const [markers, setMarkers] = useState([]);
 
   const position = {
     lat: -27.590824,
     lng: -48.551262,
   };
-
   const onMapLoad = (map) => {
     setMap(map);
   };
 
-  const onLoadA = (ref) => {
-    setSearchBoxA(ref);
+  const onLoad = (ref) => {
+    setSearchBox(ref);
   };
 
-  const onLoadB = (ref) => {
-    setSearchBoxB(ref);
-  };
-
-  const onPlacesChangedA = () => {
-    const places = searchBoxA.getPlaces();
+  // const onPlacesChanged = () => {
+  //   if (searchBox) {
+  //     const places = searchBox.getPlaces();
+  //     console.log(places);
+  //     if (places.length > 0) {
+  //       const place = places[0];
+  //       const location = {
+  //         lat: place.geometry.location.lat() || 0,
+  //         lng: place.geometry.location.lng() || 0,
+  //       };
+  //       setMarkers([...markers, location]);
+  //       map.panTo(location);
+  //     }
+  //   }
+  // };
+  const onPlacesChanged = () => {
+    const places = searchBox.getPlaces();
     console.log(places);
     const place = places[0];
     const location = {
-      lat: place.geometry.location.lat(),
-      lng: place.geometry.location.lng(),
-    };
-    setPointA(location);
-    setOrigin(null);
-    setDestination(null);
-    setResponse(null);
-    map.panTo(location);
-  };
+      lat: place?.geometry?.location?.lat() || 0,
+      lng: place?.geometry?.location?.lng() || 0,
 
-  const onPlacesChangedB = () => {
-    const places = searchBoxB.getPlaces();
-    console.log(places);
-    const place = places[0];
-    const location = {
-      lat: place.geometry.location.lat(),
-      lng: place.geometry.location.lng(),
-    };
-    setPointB(location);
-    setOrigin(null);
-    setDestination(null);
-    setResponse(null);
-    map.panTo(location);
-  };
-
-  const traceRoute = () => {
-    if (pointA && pointB) {
-      setOrigin(pointA);
-      setDestination(pointB);
     }
-  };
-
-  const directionsServiceOptions = {
-    origin,
-    destination,
-    travelMode: "DRIVING",
-  };
-
-  const directionsCallback = (res) => {
-    if (res !== null && res.status === "OK") {
-      setResponse(res);
-    } else {
-      console.log(res);
-    }
-  };
-
-  const directionsRendererOptions = {
-    directions: response,
+    // setMarkers([...markers, location])
+    map?.panTo(location)
   };
 
   return (
-    <div className={styles.map}>
-      <LoadScript
-        googleMapsApiKey={"AIzaSyCO-vDdf7TyuszVt16uV9xY53uCcBygA5k"}
-        libraries={["places"]}
+    <div  className={styles.map} >
+      
+    <LoadScript googleMapsApiKey={"AIzaSyCO-vDdf7TyuszVt16uV9xY53uCcBygA5k"} libraries={['places']} >
+      <GoogleMap
+        onLoad={onMapLoad}
+        mapContainerStyle={{ width: "100vh", height: "80vh" }}
+        center={position}
+        zoom={15}
+       
       >
-        <GoogleMap
-          onLoad={onMapLoad}
-          mapContainerStyle={{ width: "100%", height: "100%" }}
-          center={position}
-          zoom={15}
-        >
-          <div className={styles.address}>
-            <StandaloneSearchBox
-              onLoad={onLoadA}
-              onPlacesChanged={onPlacesChangedA}
-            >
-              <input
-                className={styles.addressField}
-                placeholder="Digite o endereço inicial"
-              />
-            </StandaloneSearchBox>
-            <StandaloneSearchBox
-              onLoad={onLoadB}
-              onPlacesChanged={onPlacesChangedB}
-            >
-              <input
-                className={styles.addressField}
-                placeholder="Digite o endereço final"
-              />
-            </StandaloneSearchBox>
-            <button onClick={traceRoute}>Traçar rota</button>
-          </div>
+          <Marker
+          className={styles.mapMarker}
+            position={position}
+            options={{
+              label: {
+                text: 'Posição Teste',
+               
+              },
+            }}
+          />
+          
+        <StandaloneSearchBox onLoad={onLoad} onPlacesChanged={onPlacesChanged}>
+          <input  placeholder="Digite um endereço" className={styles.address}/>
+        </StandaloneSearchBox>
 
-          {!response && pointA && <Marker position={pointA} />}
-          {!response && pointB && <Marker position={pointB} />}
+        {markers.map((marker, index) => (
+          <Marker key={index} position={marker} />
+        ))}
 
-          {origin && destination && (
-            <DirectionsService
-              options={directionsServiceOptions}
-              callback={directionsCallback}
-            />
-          )}
 
-          {response && directionsRendererOptions && (
-            <DirectionsRenderer options={directionsRendererOptions} />
-          )}
-        </GoogleMap>
-      </LoadScript>
-    </div>
+
+      </GoogleMap>
+    </LoadScript>
+    <></>
+  </div>
   );
 };
 
