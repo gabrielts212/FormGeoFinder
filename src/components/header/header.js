@@ -1,11 +1,10 @@
-import React from 'react';
-import styles from './../../styles/header.module.css';
-import CustomLink from '../link/link';
+import React from "react";
+import styles from "./../../styles/header.module.css";
+import CustomLink from "../link/link";
 
 const Header = ({ title, backgroundColor }) => {
-  
   const headerStyle = {
-    backgroundColor: backgroundColor || ' #333', 
+    backgroundColor: backgroundColor || " #82c341",
   };
 
   return (

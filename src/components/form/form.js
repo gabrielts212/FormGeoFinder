@@ -119,7 +119,7 @@ const Form = () => {
 
         <CustomLink href="/pagemap">
           <CustomButton
-            text=" Não sei o meu CEP"
+            text=" Quero localizar o meu CEP"
             type="button"
             className={styles.button}
           />

@@ -1,14 +1,45 @@
-
 .footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-  }
-  
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+.linkedinIcons {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  transition: transform 0.2s ease;
+}
+
+.linkedinIcon {
+  font-size: 24px;
+  color: #0077b5;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+@media (max-width: 768px) {
   .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    flex-direction: column;
   }
-  
+
+  .linkedinIcon {
+    margin: 10px 0;
+  }
+}
+
+.linkedinIcon:hover {
+  transform: scale(1.2);
+}

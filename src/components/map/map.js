@@ -1,16 +1,20 @@
-import { GoogleMap, Marker, useJsApiLoader, LoadScript, StandaloneSearchBox } from "@react-google-maps/api";
+import {
+  GoogleMap,
+  Marker,
+  useJsApiLoader,
+  LoadScript,
+  StandaloneSearchBox,
+} from "@react-google-maps/api";
 import React, { useState } from "react";
 import styles from "./../../styles/api.module.css";
 
-
 const MapPage = () => {
- 
   const [map, setMap] = useState(null);
   const [searchBox, setSearchBox] = useState(null);
   const [markers, setMarkers] = useState([]);
   const [center, setCenter] = useState({
     lat: -22.9068,
-    lng: -43.1729
+    lng: -43.1729,
   });
 
   const onMapLoad = (map) => {
@@ -28,7 +32,7 @@ const MapPage = () => {
         const place = places[0];
         const location = {
           lat: place.geometry.location.lat(),
-          lng: place.geometry.location.lng()
+          lng: place.geometry.location.lng(),
         };
         setMarkers([...markers, location]);
         setCenter(location);
@@ -38,41 +42,49 @@ const MapPage = () => {
 
   return (
     <div className={styles.centeredContent}>
-      <h1>Mapa que busca  CEP e localiza marcando com o pin</h1>
+      <h1>Mapa que busca CEP e localiza marcando com o pin</h1>
 
-    
-    <div className={styles.map}>
-
-      <LoadScript googleMapsApiKey={"AIzaSyCO-vDdf7TyuszVt16uV9xY53uCcBygA5k"} libraries={['places']}>
-        <GoogleMap
-          onLoad={onMapLoad}
-          mapContainerStyle={{ width: "100%", height: "90vh" }}
-          center={center}
-          zoom={15}
+      <div className={styles.map}>
+        <LoadScript
+          googleMapsApiKey={"AIzaSyCO-vDdf7TyuszVt16uV9xY53uCcBygA5k"}
+          libraries={["places"]}
         >
-          {markers.map((marker, index) => (
-            <Marker key={index} position={marker} />
-          ))}
+          <GoogleMap
+            onLoad={onMapLoad}
+            mapContainerStyle={{ width: "100%", height: "90vh" }}
+            center={center}
+            zoom={15}
+          >
+            {markers.map((marker, index) => (
+              <Marker key={index} position={marker} />
+            ))}
 
-          <Marker
-            className={styles.mapMarker}
-            position={center}
-            options={{
-              // label: {
-              //   text: 'Indicando a Rua',
-              //   color:"black"
-              // },
-            }}
-          />
+            <Marker
+              className={styles.mapMarker}
+              position={center}
+              options={
+                {
+                  // label: {
+                  //   text: 'Indicando a Rua',
+                  //   color:"black"
+                  // },
+                }
+              }
+            />
 
-          
-          <StandaloneSearchBox onLoad={onLoad} onPlacesChanged={onPlacesChanged}>
-            <input placeholder="Digite um endereço ou número  de CEP " className={styles.address} />
-          </StandaloneSearchBox>
-        </GoogleMap>
-      </LoadScript>
-      <></>
-    </div>
+            <StandaloneSearchBox
+              onLoad={onLoad}
+              onPlacesChanged={onPlacesChanged}
+            >
+              <input
+                placeholder="Digite um endereço ou número  de CEP "
+                className={styles.address}
+              />
+            </StandaloneSearchBox>
+          </GoogleMap>
+        </LoadScript>
+        <></>
+      </div>
     </div>
   );
 };
