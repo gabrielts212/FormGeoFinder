@@ -33,6 +33,17 @@ const Form = () => {
 
   return (
     <div className={styles.formContainer}>
+      <div className={styles.videoBackground}>
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className={styles.backgroundVideo}
+        >
+          <source src="/background-video.mp4" type="video/mp4" />
+        </video>
+      </div>
       <form className={styles.form} onSubmit={handleSubmit}>
         <h1 className={styles.title}>Formulário</h1>
         <div className={styles.formGroup}>
