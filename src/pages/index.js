@@ -1,11 +1,11 @@
 
-import Form from "@/components/form/form"
+import Form from "../../src/components/form/form"
 import Header from "./../components/header/header"
 import Footer from "./../components/footer/footer"
 export default function Home() {
   return (
     <div>
-   <Header />
+    <Header title="" backgroundColor="" />
    <Form/>
    <Footer />
     </div>

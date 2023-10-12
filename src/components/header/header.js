@@ -1,18 +1,22 @@
-// components/Header.js
 import React from 'react';
 import styles from './../../styles/header.module.css';
-import Link from 'next/link';
-const Header = () => {
+import CustomLink from '../link/link';
+
+const Header = ({ title, backgroundColor }) => {
+  
+  const headerStyle = {
+    backgroundColor: backgroundColor || ' #333', 
+  };
+
   return (
-    <header className={styles.header}>
+    <header className={styles.header} style={headerStyle}>
       <div className={styles.container}>
         <div className={styles.logo}>
-        <Link href="/">
-      
-          <img src="/logo.png" alt="Logo da empresa" />
-        </Link>
+          <h1>{title}</h1>
+          <CustomLink href="/">
+            <img src="/logo.png" alt="Logo da empresa" />
+          </CustomLink>
         </div>
-     
       </div>
     </header>
   );

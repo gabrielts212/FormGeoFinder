@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import styles from "../../styles/formulario.module.css";
-import Link from "next/link";
+import CustomLink from "../link/link";
+import CustomButton from "../button/button";
+
 const Form = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     password: "",
-    password2: ""
+    password2: "",
   });
 
   const handleChange = (e) => {
@@ -25,7 +27,7 @@ const Form = () => {
       name: "",
       email: "",
       password: "",
-      password2: ""
+      password2: "",
     });
   };
 
@@ -45,6 +47,7 @@ const Form = () => {
             value={formData.name}
             onChange={handleChange}
             placeholder="Nome e sobrenome"
+            required
           />
         </div>
         <div className={styles.formGroup}>
@@ -59,9 +62,9 @@ const Form = () => {
             value={formData.email}
             onChange={handleChange}
             placeholder="O seu melhor e-mail"
+            required
           />
         </div>
-
 
         <div className={styles.formGroup}>
           <label htmlFor="password" className={styles.label}>
@@ -75,9 +78,9 @@ const Form = () => {
             value={formData.password}
             onChange={handleChange}
             placeholder="Pelo menos 6 caracteres"
+            required
           />
         </div>
-
 
         <div className={styles.formGroup}>
           <label htmlFor="password2" className={styles.label}>
@@ -97,14 +100,19 @@ const Form = () => {
           </div>
         </div>
 
-        <button type="submit" className={styles.button}>
-          Cadastrar
-        </button>
-        <Link href="/pageapi">
-          <button type="button" className={styles.button}>
-            Não sei o meu CEP
-          </button>
-        </Link>
+        <CustomButton
+          text=" Cadastrar"
+          type="submit"
+          className={styles.button}
+        />
+
+        <CustomLink href="/pagemap">
+          <CustomButton
+            text=" Não sei o meu CEP"
+            type="button"
+            className={styles.button}
+          />
+        </CustomLink>
       </form>
     </div>
   );
