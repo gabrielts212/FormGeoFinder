@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./../../styles/footer.module.css";
-import { FaLinkedin } from "react-icons/fa";
-import { AiFillGithub } from "react-icons/Ai";
-import { VscGithub } from "react-icons/Vsc";
+// import { FaLinkedin } from "react-icons/fa";
+// import { AiFillGithub } from "react-icons/Ai";
+// import { VscGithub } from "react-icons/Vsc";
 
 const Footer = () => {
   return (
