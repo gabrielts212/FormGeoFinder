@@ -89,7 +89,7 @@ const Form = () => {
               id="password2"
               name="password2"
               className={styles.input}
-              value={formData.password}
+              value={formData.password2}
               onChange={handleChange}
               required
               placeholder="Insira a senha nova mais uma vez"
