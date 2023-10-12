@@ -9,7 +9,7 @@ const Footer = () => {
     <footer className={styles.footer}>
       <div className={styles.container}>
         <p>&copy; 2023 Gabriel Nascimento. Todos os direitos reservados.</p>
-        <div className={styles.linkedinIcons}>
+        {/* <div className={styles.linkedinIcons}>
           <a
             href="https://github.com/gabrielts212/"
             className={styles.linkedinIcon}
@@ -34,7 +34,7 @@ const Footer = () => {
           >
             <VscGithub size={40} color="#82c341" />
           </a>
-        </div>
+        </div> */}
       </div>
     </footer>
   );
