@@ -12,12 +12,7 @@ const Header = () => {
           <img src="/logo.png" alt="Logo da empresa" />
         </Link>
         </div>
-        <div className={styles.centerText}>
-          <h1></h1>
-        </div>
-        <div className={styles.bottomText}>
-          <p></p>
-        </div>
+     
       </div>
     </header>
   );

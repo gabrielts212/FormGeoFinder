@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
-import styles from '../../styles/formulario.module.css';
-import Link from 'next/link';
+import React, { useState } from "react";
+import styles from "../../styles/formulario.module.css";
+import Link from "next/link";
 const Form = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    password: '',
+    name: "",
+    email: "",
+    password: "",
+    password2: ""
   });
 
   const handleChange = (e) => {
@@ -18,13 +19,13 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Dados do formulário:', formData);
-
+    console.log("Dados do formulário:", formData);
 
     setFormData({
-      name: '',
-      email: '',
-      password: '',
+      name: "",
+      email: "",
+      password: "",
+      password2: ""
     });
   };
 
@@ -43,7 +44,7 @@ const Form = () => {
             className={styles.input}
             value={formData.name}
             onChange={handleChange}
-            placeholder="Nome e sobrenome" 
+            placeholder="Nome e sobrenome"
           />
         </div>
         <div className={styles.formGroup}>
@@ -57,9 +58,11 @@ const Form = () => {
             className={styles.input}
             value={formData.email}
             onChange={handleChange}
-            placeholder="O seu melhor e-mail" 
+            placeholder="O seu melhor e-mail"
           />
         </div>
+
+
         <div className={styles.formGroup}>
           <label htmlFor="password" className={styles.label}>
             Senha
@@ -71,34 +74,36 @@ const Form = () => {
             className={styles.input}
             value={formData.password}
             onChange={handleChange}
-            placeholder="Pelo menos 6 caracteres" 
+            placeholder="Pelo menos 6 caracteres"
           />
         </div>
+
+
         <div className={styles.formGroup}>
-          <label htmlFor="password" className={styles.label}>
-          Insira a senha nova mais uma vez
+          <label htmlFor="password2" className={styles.label}>
+            Insira a senha nova mais uma vez
           </label>
           <div className={styles.formGroup}>
-  <input
-    type="password"
-    id="password"
-    name="password"
-    className={styles.input}
-    value={formData.password}
-    onChange={handleChange}
-    required 
-    placeholder="Insira a senha nova mais uma vez" 
-  />
-</div>
-
+            <input
+              type="password"
+              id="password2"
+              name="password2"
+              className={styles.input}
+              value={formData.password}
+              onChange={handleChange}
+              required
+              placeholder="Insira a senha nova mais uma vez"
+            />
+          </div>
         </div>
+
         <button type="submit" className={styles.button}>
           Cadastrar
         </button>
         <Link href="/pageapi">
-        <button type="button" className={styles.button}>
-          Não Sei Meu CEP
-        </button>
+          <button type="button" className={styles.button}>
+            Não sei o meu CEP
+          </button>
         </Link>
       </form>
     </div>

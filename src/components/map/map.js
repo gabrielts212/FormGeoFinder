@@ -1,7 +1,7 @@
 import { GoogleMap, Marker, useJsApiLoader, LoadScript, StandaloneSearchBox } from "@react-google-maps/api";
 import React, { useState } from "react";
 import styles from "./../../styles/api.module.css";
-// import CEPInput from './../cepinput/cepinput';
+
 
 const MapPage = () => {
  
@@ -37,11 +37,16 @@ const MapPage = () => {
   };
 
   return (
+    <div className={styles.centeredContent}>
+      <h1>Mapa que busca  CEP e localiza marcando com o pin</h1>
+
+    
     <div className={styles.map}>
+
       <LoadScript googleMapsApiKey={"AIzaSyCO-vDdf7TyuszVt16uV9xY53uCcBygA5k"} libraries={['places']}>
         <GoogleMap
           onLoad={onMapLoad}
-          mapContainerStyle={{ width: "100%", height: "50vh" }}
+          mapContainerStyle={{ width: "100%", height: "90vh" }}
           center={center}
           zoom={15}
         >
@@ -53,19 +58,21 @@ const MapPage = () => {
             className={styles.mapMarker}
             position={center}
             options={{
-              label: {
-                text: 'Posição Teste',
-              },
+              // label: {
+              //   text: 'Indicando a Rua',
+              //   color:"black"
+              // },
             }}
           />
 
           
           <StandaloneSearchBox onLoad={onLoad} onPlacesChanged={onPlacesChanged}>
-            <input placeholder="Digite um endereço" className={styles.address} />
+            <input placeholder="Digite um endereço ou número  de CEP " className={styles.address} />
           </StandaloneSearchBox>
         </GoogleMap>
       </LoadScript>
       <></>
+    </div>
     </div>
   );
 };
