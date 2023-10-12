@@ -16,7 +16,7 @@ function App() {
     <div className={styles.container}>
     <div className={styles.centeredContent}>
       <h1>Mapa de CEP</h1>
-      <CEPInput addMarker={addMarker} />
+      {/* <CEPInput addMarker={addMarker} /> */}
       <Map markers={markers} />
     </div>
   </div>

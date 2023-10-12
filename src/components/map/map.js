@@ -1,8 +1,10 @@
 import { GoogleMap, Marker, useJsApiLoader, LoadScript, StandaloneSearchBox } from "@react-google-maps/api";
 import React, { useState } from "react";
 import styles from "./../../styles/api.module.css";
+// import CEPInput from './../cepinput/cepinput';
 
 const MapPage = () => {
+ 
   const [map, setMap] = useState(null);
   const [searchBox, setSearchBox] = useState(null);
   const [markers, setMarkers] = useState([]);
@@ -39,7 +41,7 @@ const MapPage = () => {
       <LoadScript googleMapsApiKey={"AIzaSyCO-vDdf7TyuszVt16uV9xY53uCcBygA5k"} libraries={['places']}>
         <GoogleMap
           onLoad={onMapLoad}
-          mapContainerStyle={{ width: "100%", height: "80vh" }}
+          mapContainerStyle={{ width: "100%", height: "50vh" }}
           center={center}
           zoom={15}
         >
@@ -57,6 +59,7 @@ const MapPage = () => {
             }}
           />
 
+          
           <StandaloneSearchBox onLoad={onLoad} onPlacesChanged={onPlacesChanged}>
             <input placeholder="Digite um endereço" className={styles.address} />
           </StandaloneSearchBox>

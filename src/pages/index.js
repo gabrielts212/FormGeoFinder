@@ -6,10 +6,10 @@ import Apipage from "./../components/pageapi/pageapi"
 export default function Home() {
   return (
     <div>
-   <Header />
+   {/* <Header /> */}
    <Form/>
    {/* <Apipage/> */}
-   <Footer />
+   {/* <Footer /> */}
     </div>
   )
 }

@@ -1,0 +1,45 @@
+
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center; 
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center; 
+  }
+  
+  .logo img {
+    max-width: 100px;
+    height: auto;
+    margin-right: 40px;
+  }
+  
+  .centerText {
+    text-align: center; 
+    margin: 20px 0;
+    flex: 1;
+  }
+  
+  .bottomText {
+    text-align: center; 
+    margin: 20px 0;
+    flex: 1;
+  }
+  
+ 
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    text-align: center; 
+    }
+  }
+  
