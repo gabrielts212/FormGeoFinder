@@ -1,15 +1,15 @@
 import React from "react";
 import styles from "./../../styles/footer.module.css";
-// import { FaLinkedin } from "react-icons/fa";
-// import { AiFillGithub } from "react-icons/Ai";
-// import { VscGithub } from "react-icons/Vsc";
+import { FaLinkedin } from "react-icons/fa";
+import { AiFillGithub } from "react-icons/ai";
+import { VscGithub } from "react-icons/vsc";
 
-const Footer = () => {
+function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
         <p>&copy; 2023 Gabriel Nascimento. Todos os direitos reservados.</p>
-        {/* <div className={styles.linkedinIcons}>
+        <div className={styles.linkedinIcons}>
           <a
             href="https://github.com/gabrielts212/"
             className={styles.linkedinIcon}
@@ -34,10 +34,10 @@ const Footer = () => {
           >
             <VscGithub size={40} color="#82c341" />
           </a>
-        </div> */}
+        </div>
       </div>
     </footer>
   );
-};
+}
 
 export default Footer;
