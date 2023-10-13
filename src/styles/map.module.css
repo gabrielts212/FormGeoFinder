@@ -8,13 +8,13 @@
 .centeredContent {
   text-align: center;
   background-color: #82c341;
-
-  padding: 30px;
+  padding: 0px;
 }
 .centeredContent h1 {
   text-align: center;
-
   padding-bottom: 30px;
+  padding-top: 30px;
+  color: white;
 }
 
 .mapMarker {
