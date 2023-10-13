@@ -15,14 +15,14 @@
   text-align: center;
 }
 
-.linkedinIcons {
+.icons {
   display: flex;
   align-items: center;
   margin-top: 20px;
   transition: transform 0.2s ease;
 }
 
-.linkedinIcon {
+.icon {
   font-size: 24px;
   color: #0077b5;
   margin: 0 10px;
@@ -35,11 +35,11 @@
     flex-direction: column;
   }
 
-  .linkedinIcon {
+  .icon {
     margin: 10px 0;
   }
 }
 
-.linkedinIcon:hover {
+.icon:hover {
   transform: scale(1.2);
 }

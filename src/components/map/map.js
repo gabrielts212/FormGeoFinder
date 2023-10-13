@@ -6,15 +6,15 @@ import {
   StandaloneSearchBox,
 } from "@react-google-maps/api";
 import React, { useState } from "react";
-import styles from "./../../styles/api.module.css";
+import styles from "./../../styles/map.module.css";
 
 const MapPage = () => {
   const [map, setMap] = useState(null);
   const [searchBox, setSearchBox] = useState(null);
   const [markers, setMarkers] = useState([]);
   const [center, setCenter] = useState({
-    lat: -22.9068,
-    lng: -43.1729,
+    lat: -22.972173348571047,
+    lng: -43.39625871961778,
   });
 
   const onMapLoad = (map) => {

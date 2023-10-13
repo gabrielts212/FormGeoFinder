@@ -9,10 +9,10 @@ function Footer() {
     <footer className={styles.footer}>
       <div className={styles.container}>
         <p>&copy; 2023 Gabriel Nascimento. Todos os direitos reservados.</p>
-        <div className={styles.linkedinIcons}>
+        <div className={styles.icons}>
           <a
             href="https://github.com/gabrielts212/"
-            className={styles.linkedinIcon}
+            className={styles.icon}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -20,7 +20,7 @@ function Footer() {
           </a>
           <a
             href="https://www.linkedin.com/in/gabriel-nascimento-pereira/"
-            className={styles.linkedinIcon}
+            className={styles.icon}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -28,7 +28,7 @@ function Footer() {
           </a>
           <a
             href="https://github.com/gabrielts212/desafio-grupo-blend"
-            className={styles.linkedinIcon}
+            className={styles.icon}
             target="_blank"
             rel="noopener noreferrer"
           >
