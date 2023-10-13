@@ -25,4 +25,5 @@ As principais tecnologias utilizadas no meu projeto
 - **Html Css e Js:** Para construir o formulario.
 - **Css:** Para estruturação  responsividade e estilo da interface, sem o uso de frameworks de Css como Chakra ui.
 - **Next e React:** Para construir a interface do mapa e outras partes da aplicação.
+- **Next e React:** Diferença entre o css no Next e no React,  Next: className={styles.map} arquivo css: map.module.css = React: className="map" arquivo css: map.css.
 - **Variavel de Ambiente  .ENV:** Não foi utilizada para armazenar as chaves de acesso e URLs da API, para não da erro de chave privada no deploy na vercel.
