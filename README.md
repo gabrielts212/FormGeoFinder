@@ -2,22 +2,25 @@
 
 ## **1. Introdução**
 
-O meu projeto é uma aplicação web que oferece funcionalidades de login, cadastro de usuários, e a capacidade de listar dados da Punk API v2. A aplicação é responsiva, ou seja, se adapta a diferentes dispositivos e utiliza autenticação por token para proteger os endpoints de consulta de dados. 
+O meu projeto é uma aplicação web que oferece funcionalidade de cadastro, e consumo da api do google maps que ao digitar um CEP ou endereço no mapa, é marcada a localização com um pin. 
 
-## **4. Uso 🖱**
+## **2. Funcionalidades 🔎**
 
-A aplicação possui as seguintes funcionalidades:
+- **Redirecionamento para a Página Principal:** Clicar no ícone do header redireciona para a página principal.
 
-- **Login e Cadastro:** Você pode se cadastrar como um novo usuário ou fazer login com as credenciais previamente registradas. Erros de usuário ou senha incorreta serão indicados visualmente.
-- **Listagem de Dados da Punk API:** Após fazer login, você terá acesso à listagem de dados da Punk API v2. que tera um filtro de pesquisa por nome.
+- **Formulário Responsivo:** O formulário é responsivo e se ajusta automaticamente a diferentes tamanhos de tela.
 
-## **5. Tecnologias Utilizadas 🖥**
+- **Envio de Dados do Formulário:** Ao preencher o formulário, as informações serão exibidas no console. 
+
+- **Mapa Responsivo:** O mapa é responsivo, e marca a localização com um pin ao digitar e depois selecionar  o cep ou endereço no input.
+
+- **Localização Inicial do Mapa:** O mapa começa em uma localização específica  definida por mim.
+
+## **3. Tecnologias Utilizadas ⚙**
 
 As principais tecnologias utilizadas no meu projeto
 
-- **Node.js :** Para construir o servidor da aplicação.
-- **Next:** Para construir a interface de usuário.
-- **JWT (JSON Web Tokens):** Para autenticação dos endpoints da API= https://jwt.io/.
-- **Fetch:** Para fazer solicitações à API da Punk API v2.
-- **Chakra UI:** Para estruturação  responsividade e estilo da interface.
-- **Variavel de Ambiente  .ENV:** Utilizada para armazenar de forma segura chaves de acesso e URLs da API.
+- **Html Css e Js:** Para construir o formulario.
+- **Css:** Para estruturação  responsividade e estilo da interface, sem o uso de frameworks de Css como Chakra ui.
+- **Next e React:** Para construir a interface do mapa e outras partes da aplicação.
+- **Variavel de Ambiente  .ENV:** Não foi utilizada para armazenar as chaves de acesso e URLs da API, para não da erro de chave privada no deploy na vercel.
