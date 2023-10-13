@@ -2,7 +2,7 @@
 
 ## **1. Introdução**
 
-O meu projeto é uma aplicação web que oferece funcionalidade de cadastro, e consumo da api do google maps que ao digitar um CEP ou endereço no input do mapa, é marcada a localização com um pin. 
+O meu projeto é uma aplicação web que oferece funcionalidade de cadastro, e consumo da api do google maps que ao digitar um CEP ou endereço no input do mapa, é marcada a localização com um pin 📍. 
 
 ## **2. Funcionalidades 🔎**
 
