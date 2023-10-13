@@ -1,40 +1,28 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Primeiro passo npm i e depois npm run dev ✔
 
-## Getting Started
+## **1. Introdução**
 
-First, run the development server:
+O meu projeto é uma aplicação web que oferece funcionalidade de cadastro, e consumo da api do google maps que ao digitar um CEP ou endereço no input do mapa, é marcada a localização com um pin 📍. 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## **2. Funcionalidades 🔎**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Página do Mapa:** Para acessar a pagina do mapa, é so clicar no button "Quero localizar o meu cep" que esta no formulario.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- **Redirecionamento para a Página Principal:** Clicar no ícone do header redireciona para a página principal quando esta na página do mapa.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- **Formulário Responsivo:** O formulário é responsivo e se ajusta automaticamente a diferentes tamanhos de tela.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- **Envio de Dados do Formulário:** Ao preencher o formulário, as informações serão exibidas no console. 
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Mapa Responsivo:** O mapa é responsivo, e marca a localização com um pin ao digitar e depois selecionar  o cep ou endereço no input.
 
-## Learn More
+- **Localização Inicial do Mapa:** O mapa começa em uma localização específica  definida por mim.
 
-To learn more about Next.js, take a look at the following resources:
+## **3. Tecnologias Utilizadas ⚙**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+As principais tecnologias utilizadas no meu projeto
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **Html Css e Js:** Para construir o formulario.
+- **Css:** Para estruturação  responsividade e estilo da interface, sem o uso de frameworks de Css como Chakra ui.
+- **Next e React:** Para construir a interface do mapa e outras partes da aplicação.
+- **Variavel de Ambiente  .ENV:** Não foi utilizada para armazenar as chaves de acesso e URLs da API, para não da erro de chave privada no deploy na vercel.
