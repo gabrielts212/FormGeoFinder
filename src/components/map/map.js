@@ -13,8 +13,8 @@ const MapPage = () => {
   const [searchBox, setSearchBox] = useState(null);
   const [markers, setMarkers] = useState([]);
   const [center, setCenter] = useState({
-    lat: -22.972173348571047,
-    lng: -43.39625871961778,
+    lat: -22.972506678390094,
+    lng: -43.39620335206514,
   });
 
   const onMapLoad = (map) => {
