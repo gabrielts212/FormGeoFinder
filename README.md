@@ -6,7 +6,9 @@ O meu projeto é uma aplicação web que oferece funcionalidade de cadastro, e c
 
 ## **2. Funcionalidades 🔎**
 
-- **Redirecionamento para a Página Principal:** Clicar no ícone do header redireciona para a página principal.
+- **Página do Mapa:** Para acessar a pagina do mapa, é so clicar no button "Quero localizar o meu cep" que esta no formulario.
+
+- **Redirecionamento para a Página Principal:** Clicar no ícone do header redireciona para a página principal quando esta na página do mapa.
 
 - **Formulário Responsivo:** O formulário é responsivo e se ajusta automaticamente a diferentes tamanhos de tela.
 
