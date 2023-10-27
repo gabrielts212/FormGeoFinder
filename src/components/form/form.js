@@ -41,7 +41,7 @@ const Form = () => {
           playsInline
           className={styles.backgroundVideo}
         >
-          <source src="/background-video.mp4" type="video/mp4" />
+          <source src="/background-video2.mp4" type="video/mp4" />
         </video>
       </div>
       <form className={styles.form} onSubmit={handleSubmit}>

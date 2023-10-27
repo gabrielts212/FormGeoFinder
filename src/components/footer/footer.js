@@ -16,7 +16,7 @@ function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <AiFillGithub size={40} color="#82c341" />
+            <AiFillGithub size={40} color="#6d98fd" />
           </a>
           <a
             href="https://www.linkedin.com/in/gabriel-nascimento-pereira/"
@@ -24,7 +24,7 @@ function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaLinkedin size={40} color="#82c341" />
+            <FaLinkedin size={40} color="#6d98fd" />
           </a>
           <a
             href="https://github.com/gabrielts212/desafio-grupo-blend"
@@ -32,7 +32,7 @@ function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <VscGithub size={40} color="#82c341" />
+            <VscGithub size={40} color="#6d98fd" />
           </a>
         </div>
       </div>

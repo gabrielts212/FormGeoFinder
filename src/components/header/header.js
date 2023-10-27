@@ -4,7 +4,7 @@ import CustomLink from "../link/link";
 
 const Header = ({ title, backgroundColor }) => {
   const headerStyle = {
-    backgroundColor: backgroundColor || " #82c341",
+    backgroundColor: backgroundColor || " #6d98fd",
   };
 
   return (

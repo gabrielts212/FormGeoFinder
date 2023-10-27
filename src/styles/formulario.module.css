@@ -30,7 +30,7 @@
 }
 
 .form {
-  background-color: white;
+  background-color: rgba(30, 39, 46, 0.4);
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -41,7 +41,7 @@
 .title {
   text-align: center;
   margin-bottom: 20px;
-  color: black;
+  color: white;
 }
 
 .formGroup {
@@ -51,7 +51,7 @@
 .label {
   display: block;
   margin-bottom: 5px;
-  color: black;
+  color: white;
 }
 
 .input {
@@ -70,7 +70,7 @@
 .button {
   width: 100%;
   padding: 10px;
-  background-color: #82c341;
+  background-color:  #6d98fd;
   color: #fff;
   border: none;
   border-radius: 4px;
